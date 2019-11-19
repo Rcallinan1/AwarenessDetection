@@ -1,1 +1,7 @@
-%This is for noise removal and contrast enhancement
+function [outputArg1,outputArg2] = preProcessing(inputArg1,inputArg2)
+%PREPROCESSING Summary of this function goes here
+%   Detailed explanation goes here
+outputArg1 = inputArg1;
+outputArg2 = inputArg2;
+end
+
