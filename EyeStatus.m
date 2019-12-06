@@ -16,7 +16,7 @@ function [outputArg1] = EyeStatus(inputArg1,inputArg2,inputArg3)
                 pupil_x=centers(1);
                 disL=abs(0-pupil_x);    %distance from left edge to center point
                 disR=abs(bboxeyes(1,3)/3-pupil_x);%distance from right edge to center point
-                if disL>disR+16
+                if disL>disR+50
                     outputArg1 = "Looking Right";
                 else if disR>disL
                     outputArg1 = "Looking Left";
