@@ -1,4 +1,4 @@
-function [outputArg1] = segmentation(inputArg1)
+function [outputArg1,outputArg2,outputArg3] = GetEye(inputArg1)
     img = inputArg1;
     
     faceDetector = vision.CascadeObjectDetector();
@@ -27,6 +27,7 @@ function [outputArg1] = segmentation(inputArg1)
     bbOneEye=[bbEyes(bigEyes,1),bbEyes(bigEyes,2),bbEyes(bigEyes,3)/3,bbEyes(bigEyes,4)];   %resize the eyepair width in half
     eye = imcrop(faceImage,bbOneEye(1,:));
     outputArg1 = eye;
-    
+    outputArg2 = bigEyes;
+    outputArg3 = bbEyes;
 end
 
