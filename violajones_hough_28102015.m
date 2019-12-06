@@ -1,4 +1,4 @@
-clear all   
+clear 00all   
 clf('reset');
 
 cam=webcam();   %create webcam object
