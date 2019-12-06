@@ -1,4 +1,5 @@
-function [outputArg1,outputArg2] = main(image)
-    imshow(image);
+function [result] = main(inputImage)
+    eyeImage = GetEye(inputImage);
+    
 end
 
