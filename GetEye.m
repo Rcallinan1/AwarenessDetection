@@ -1,4 +1,4 @@
-function [outputArg1] = segmentation(inputArg1)
+function [outputArg1] = GetEye(inputArg1)
     img = inputArg1;
     
     faceDetector = vision.CascadeObjectDetector();
