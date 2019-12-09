@@ -1,8 +1,10 @@
 function [outputArg1,outputArg2,outputArg3] = GetEye(inputArg1)
     img = inputArg1;
-    
+    img = rgb2gray(img);
+    img = flip(img, 2); % Flips the image horizontally
+
     faceDetector = vision.CascadeObjectDetector();
-    eyeDetector = vision.CascadeObjectDetector('EyePairSmall');
+    eyeDetector = vision.CascadeObjectDetector('EyePairBig');
     bb = step(faceDetector,img);
     
     %Detect the biggest box, which is the face

@@ -11,7 +11,7 @@ straight=imread('STRAIGHT.jpg');
 detector = vision.CascadeObjectDetector(); % Create a detector for face using Viola-Jones
 detector1 = vision.CascadeObjectDetector('EyePairSmall'); %create detector for eyepair
 
-while true % Infinite loop to continuously detect the face
+while(true)
     
     vid=snapshot(cam);  %get a snapshot of webcam
     vid = rgb2gray(vid);    %convert to grayscale
@@ -65,9 +65,9 @@ while true % Infinite loop to continuously detect the face
                 disL=abs(0-pupil_x);    %distance from left edge to center point
                 disR=abs(bboxeyes(1,3)/3-pupil_x);%distance from right edge to center point
                 subplot(2,2,4);
-                if disL>disR+16
+                if disL>disR+18
                     subimage(right);
-                else if disR>disL
+                else if disR>disL-12
                     subimage(left);
                     else
                        subimage(straight); 
