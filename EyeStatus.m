@@ -11,7 +11,8 @@ function [outputArg1] = EyeStatus(inputArg1,inputArg2,inputArg3)
                  
              eyesPositions = centers;
                  
-                          
+             outputArg1 = "No Face";
+     
              if ~isempty(centers)
                 pupil_x=centers(1);
                 disL=abs(0-pupil_x);    %distance from left edge to center point
@@ -26,6 +27,5 @@ function [outputArg1] = EyeStatus(inputArg1,inputArg2,inputArg3)
                 end
      
              end          
-
 end
 

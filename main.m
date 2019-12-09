@@ -3,10 +3,16 @@ function [result] = main(inputImage)
     if(exist('eye') ~= 1 || exist('bigEyes') ~= 1 || exist('bbEyes') ~= 1)
        result = 'No Face';
     elseif(eye == 0)
-        result = 'No Pupil';      
+        result = 'No Pupil';
+       clear eye;
+       clear bigEyes;
+       clear bbEyes;
     else
        disp(eye);
        result = EyeStatus(eye,bigEyes,bbEyes);
+       clear eye;
+       clear bigEyes;
+       clear bbEyes;
     end
 end
 
