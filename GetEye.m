@@ -1,4 +1,5 @@
 function [outputArg1,outputArg2,outputArg3] = GetEye(inputArg1)
+try
     img = inputArg1;
     img = rgb2gray(img);
     img = flip(img, 2); % Flips the image horizontally
@@ -31,5 +32,10 @@ function [outputArg1,outputArg2,outputArg3] = GetEye(inputArg1)
     outputArg1 = eye;
     outputArg2 = bigEyes;
     outputArg3 = bbEyes;
+catch
+    outputArg1 = 0;
+    outputArg2 = 0;
+    outputArg3 = 0;
+end
 end
 
