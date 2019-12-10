@@ -5,7 +5,7 @@ try
     img = flip(img, 2); % Flips the image horizontally
 
     faceDetector = vision.CascadeObjectDetector();
-    eyeDetector = vision.CascadeObjectDetector('EyePairBig');
+    eyeDetector = vision.CascadeObjectDetector('EyePairSmall');
     bb = step(faceDetector,img);
     
     %Detect the biggest box, which is the face
